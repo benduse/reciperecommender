@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlavorFind - Recipe Recommender</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="logo">FlavorFind</div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container hero" id="home">
+    <div class="hero-text">
+      <h1>Find Amazing Recipes Using Your Ingredients</h1>
+
+      <p>
+        Discover delicious recipes from different cuisines around the world.
+        Search by ingredients and explore meal inspiration instantly.
+      </p>
+
+      <a href="#search" class="btn">Start Searching</a>
+    </div>
+
+    <div class="hero-images">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop" alt="Food">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop" alt="Meal">
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop" alt="Cuisine">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" alt="Recipe">
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About FlavorFind</h2>
+
+      <p class="section-description">
+        FlavorFind is an interactive recipe recommender application powered by a live food recipe API.
+        Users can search recipes by ingredients and cuisine type.
+      </p>
+
+      <div class="about-grid">
+        <div>
+          <h2>Smart Recipe Discovery</h2>
+          <p>
+            The platform provides quick recipe suggestions with meal images,
+            cuisine details, cooking videos, and recipe source links.
+          </p>
+        </div>
+
+        <div class="about-card-grid">
+          <div class="about-card">
+            <h3>🍲 Ingredients Search</h3>
+            <p>Search recipes using available ingredients.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>🌍 Global Cuisine</h3>
+            <p>Explore international dishes and cuisines.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>📱 Responsive Design</h3>
+            <p>Works on desktop, tablets, and mobile devices.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>⚡ Live API</h3>
+            <p>Integrated with TheMealDB food API.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="search">
+    <div class="container">
+      <h2 class="section-title">Search Recipes</h2>
+
+      <p class="section-description">
+        Enter ingredients and select a cuisine type to get recipe recommendations.
+      </p>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="ingredientInput"
+          placeholder="Enter ingredients e.g. chicken, rice"
+        >
+
+        <select id="cuisineSelect">
+          <option value="All">All Cuisines</option>
+          <option value="American">American</option>
+          <option value="Italian">Italian</option>
+          <option value="Mexican">Mexican</option>
+          <option value="Indian">Indian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="French">French</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Thai">Thai</option>
+        </select>
+
+        <button class="btn" id="searchBtn">Search</button>
+      </div>
+
+      <div class="loading" id="loading"></div>
+      <div class="error-message" id="error"></div>
+
+      <div class="recipes" id="recipesContainer"></div>
+    </div>
+  </section>
+<footer>
+  <section id="privacy">
+    <div class="container legal-grid">
+      <div class="legal-card">
+        <h2>Privacy Policy</h2>
+
+        <p>
+          FlavorFind respects user privacy and only uses search input to fetch recipe recommendations.
+          No sensitive information is stored.
+        </p>
+      </div>
+
+      <div class="legal-card">
+        <h2>Cookie Policy</h2>
+
+        <p>
+          This website may use browser cookies and local storage to improve user experience and performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+    <div class="container footer-content">
+      <div>
+        <h2 class="logo">FlavorFind</h2>
+        <p>Made in the kitchen with love.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#search">Recipes</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
